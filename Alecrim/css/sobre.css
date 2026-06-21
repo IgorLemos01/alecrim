@@ -1,0 +1,135 @@
+/* ============================================================
+   SOBRE — Seção Sobre Nós
+   ============================================================ */
+
+.sobre {
+  background: var(--branco);
+  padding: var(--section-padding);
+}
+
+/* ── Layout dois colunas ── */
+.sobre__inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+/* ── Visual (left) ── */
+.sobre__visual {
+  position: relative;
+}
+
+.sobre__image-wrapper {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background: var(--gradient-hero);
+  aspect-ratio: 4/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sobre__image-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  color: rgba(255,255,255,0.8);
+  font-size: 0.9rem;
+  padding: 40px;
+  text-align: center;
+}
+
+.sobre__image-placeholder .icon {
+  font-size: 4rem;
+  opacity: 0.7;
+}
+
+/* Floating badge */
+.sobre__badge-float {
+  position: absolute;
+  bottom: -16px;
+  right: -16px;
+  background: var(--branco);
+  border: 1px solid #e8eef8;
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 160px;
+}
+
+.sobre__badge-float .badge-icon {
+  width: 44px;
+  height: 44px;
+  background: var(--gradient-verde);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.sobre__badge-float .badge-text strong {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--azul-escuro);
+}
+
+.sobre__badge-float .badge-text span {
+  font-size: 0.72rem;
+  color: #888;
+  font-weight: 500;
+}
+
+/* ── Content (right) ── */
+.sobre__content {}
+
+.sobre__text {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.75;
+  margin-bottom: 20px;
+}
+
+/* ── Feature list ── */
+.sobre__features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 28px 0 36px;
+}
+
+.sobre__feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+.sobre__feature-icon {
+  width: 28px;
+  height: 28px;
+  background: rgba(2, 226, 109, 0.12);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+  color: var(--verde-medio);
+  font-weight: 700;
+}

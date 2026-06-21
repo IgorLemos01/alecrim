@@ -1,0 +1,73 @@
+/* ============================================================
+   WHATSAPP BUTTON — Botão flutuante WhatsApp
+   ============================================================ */
+
+.whatsapp-btn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 999;
+  width: 60px;
+  height: 60px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+  animation: pulse-glow 2.5s ease-in-out infinite;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.1) translateY(-2px);
+  animation: none;
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-btn svg,
+.whatsapp-btn .whatsapp-icon {
+  width: 32px;
+  height: 32px;
+  fill: white;
+  color: white;
+}
+
+/* Tooltip */
+.whatsapp-btn::before {
+  content: 'Fale conosco!';
+  position: absolute;
+  right: calc(100% + 12px);
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--quase-preto);
+  color: var(--branco);
+  font-size: 0.78rem;
+  font-weight: 500;
+  font-family: var(--font-family);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-fast);
+}
+
+.whatsapp-btn::after {
+  content: '';
+  position: absolute;
+  right: calc(100% + 6px);
+  top: 50%;
+  transform: translateY(-50%);
+  border: 5px solid transparent;
+  border-left-color: var(--quase-preto);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-fast);
+}
+
+.whatsapp-btn:hover::before,
+.whatsapp-btn:hover::after {
+  opacity: 1;
+}

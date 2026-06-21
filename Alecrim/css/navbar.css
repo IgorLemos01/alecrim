@@ -1,0 +1,276 @@
+/* ============================================================
+   NAVBAR — Barra de navegação branca + Sidebar Drawer mobile
+   ============================================================ */
+
+/* ── Navbar base ── */
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  height: var(--navbar-height);
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  transition: box-shadow var(--transition-md);
+}
+
+.navbar.scrolled {
+  box-shadow: 0 4px 24px rgba(4,83,157,0.14);
+}
+
+/* ── Inner container ── */
+.navbar__inner {
+  max-width: var(--container-max);
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 32px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* ── Logo ── */
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.navbar__logo-img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* ── Desktop nav links ── */
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  list-style: none;
+  margin-left: auto;
+}
+
+.navbar__links a {
+  display: block;
+  color: var(--azul-escuro);
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: color var(--transition-fast), background var(--transition-fast);
+  white-space: nowrap;
+}
+
+.navbar__links a:hover,
+.navbar__links a.active {
+  color: var(--azul-escuro);
+  background: var(--cinza-claro);
+}
+
+.navbar__links a.active {
+  font-weight: 700;
+  color: var(--azul-medio);
+}
+
+/* ── CTA button ── */
+.navbar__cta {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--gradient-verde);
+  color: #fff;
+  font-family: var(--font-family);
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 10px 22px;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  box-shadow: 0 3px 14px rgba(2, 226, 109, 0.35);
+  white-space: nowrap;
+}
+
+.navbar__cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 22px rgba(2, 226, 109, 0.5);
+}
+
+/* ── Hamburger button ── */
+.navbar__hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  padding: 6px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  flex-shrink: 0;
+  transition: background var(--transition-fast);
+}
+
+.navbar__hamburger:hover {
+  background: var(--cinza-claro);
+}
+
+.navbar__hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--azul-escuro);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: center;
+}
+
+/* Hamburger → X */
+.navbar__hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.navbar__hamburger.active span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.navbar__hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+
+/* ════════════════════════════════════════════
+   SIDEBAR DRAWER (mobile)
+   ════════════════════════════════════════════ */
+
+/* Overlay escuro atrás do sidebar */
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9998;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar-overlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Drawer lateral */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 280px;
+  height: 100vh;
+  background: var(--azul-escuro);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 6px 0 32px rgba(0,0,0,0.25);
+  transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+/* Header do sidebar (logo + fechar) */
+.sidebar__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  flex-shrink: 0;
+}
+
+.sidebar__logo-link {
+  display: block;
+}
+
+.sidebar__logo-img {
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+  /* Fundo branco intencional — logo tem bg branco */
+  background: #fff;
+  border-radius: var(--radius-sm);
+  padding: 4px 10px;
+}
+
+.sidebar__close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: rgba(255,255,255,0.1);
+  border-radius: var(--radius-sm);
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border: none;
+  flex-shrink: 0;
+  transition: background var(--transition-fast);
+}
+
+.sidebar__close:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* Links de navegação */
+.sidebar__nav {
+  flex: 1;
+  padding: 8px 0;
+  overflow-y: auto;
+}
+
+.sidebar__links {
+  list-style: none;
+}
+
+.sidebar__links a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 24px;
+  color: rgba(255,255,255,0.8);
+  font-size: 0.98rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-left: 3px solid transparent;
+  transition: all var(--transition-fast);
+}
+
+.sidebar__links a:hover,
+.sidebar__links a.active {
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+  border-left-color: var(--verde-vibrante);
+  padding-left: 28px;
+}
+
+.sidebar__links a.active {
+  font-weight: 700;
+}
+
+/* Footer do sidebar (botão Agendar) */
+.sidebar__footer {
+  padding: 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  flex-shrink: 0;
+}
+
+.sidebar__footer .btn-primary {
+  width: 100%;
+  justify-content: center;
+  font-size: 0.95rem;
+}
+
+/* Bloquear scroll do body quando sidebar aberto */
+body.sidebar-open {
+  overflow: hidden;
+}

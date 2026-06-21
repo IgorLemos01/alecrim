@@ -1,0 +1,293 @@
+/* ============================================================
+   RESPONSIVE — Media queries centralizadas
+   Breakpoints:
+     Desktop:   > 1024px (padrão)
+     Tablet:    768px – 1024px
+     Mobile L:  480px – 767px
+     Mobile S:  < 480px
+   ============================================================ */
+
+
+/* ═══════════════════════════════════════════
+   TABLET / MOBILE  (≤ 1024px)
+   Mostra hambúrguer, esconde links e CTA desktop
+═══════════════════════════════════════════ */
+@media (max-width: 1024px) {
+
+  /* ── Navbar ── */
+  .navbar__links,
+  .navbar__cta {
+    display: none;
+  }
+
+  .navbar__hamburger {
+    display: flex;
+    margin-left: auto;
+  }
+
+  .navbar__inner {
+    padding: 0 20px;
+  }
+
+  /* ── Hero ── */
+  .hero__stats-inner {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .hero__stat-item + .hero__stat-item {
+    border-left: none;
+  }
+
+  /* ── Diferenciais ── */
+  .diferenciais__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* ── Especialidades ── */
+  .especialidades__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* ── Exames ── */
+  .exames__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* ── Sobre ── */
+  .sobre__inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .sobre__visual {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  /* ── Footer ── */
+  .footer__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  /* ── Unidades ── */
+  .unidades__horarios {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
+
+
+/* ═══════════════════════════════════════════
+   MOBILE L  (≤ 767px)
+═══════════════════════════════════════════ */
+@media (max-width: 767px) {
+
+  section {
+    padding: 56px 16px;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  /* ── Navbar ── */
+  .navbar {
+    height: 64px;
+  }
+
+  body {
+    padding-top: 64px;
+  }
+
+  /* ── Hero ── */
+  .hero__banner-wrap {
+    padding: 20px 16px 0;
+  }
+
+  .hero__banner-img {
+    border-radius: var(--radius-md);
+  }
+
+  .hero__cta-bar {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 20px 16px;
+    gap: 12px;
+  }
+
+  .hero__cta-bar .btn-primary,
+  .hero__cta-bar .btn-secondary {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .hero__stats-bar {
+    padding: 20px 16px;
+  }
+
+  .hero__stats-inner {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .hero__stat-num {
+    font-size: 1.5rem;
+  }
+
+  .hero__stat-label {
+    font-size: 0.72rem;
+  }
+
+  /* ── Section headers ── */
+  .section-title {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+
+  .section-header {
+    margin-bottom: 32px;
+  }
+
+  /* ── Diferenciais ── */
+  .diferenciais__stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 36px;
+  }
+
+  .diferenciais__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* ── Especialidades ── */
+  .especialidades__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .specialty-card {
+    padding: 18px 12px;
+  }
+
+  /* ── Exames ── */
+  .exames__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* ── Sobre ── */
+  .sobre__inner {
+    gap: 28px;
+  }
+
+  .sobre__badge-float {
+    right: 0;
+    bottom: -12px;
+  }
+
+  /* ── Unidades ── */
+  .unidades__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .unidade-card {
+    padding: 24px 20px;
+  }
+
+  .unidade-card__actions {
+    flex-direction: column;
+  }
+
+  .unidade-btn {
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* ── Footer ── */
+  .footer__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+
+  /* ── Page Banner ── */
+  .page-hero {
+    padding: 40px 16px;
+  }
+
+  .image-banner__img {
+    max-height: 220px;
+  }
+
+  .cta-section {
+    padding: 48px 16px;
+  }
+
+  /* ── WhatsApp btn ── */
+  .whatsapp-btn {
+    width: 54px;
+    height: 54px;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .whatsapp-btn::before,
+  .whatsapp-btn::after {
+    display: none;
+  }
+}
+
+
+/* ═══════════════════════════════════════════
+   MOBILE S  (≤ 480px)
+═══════════════════════════════════════════ */
+@media (max-width: 480px) {
+
+  .hero__stat-num {
+    font-size: 1.3rem;
+  }
+
+  .especialidades__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .specialty-card__name {
+    font-size: 0.75rem;
+  }
+
+  .diferenciais__stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stat-card__value {
+    font-size: 1.75rem;
+  }
+
+  .section-label {
+    font-size: 0.72rem;
+    padding: 5px 12px;
+  }
+
+  .navbar__logo-img {
+    height: 40px;
+  }
+}
+
+
+/* ═══════════════════════════════════════════
+   LARGE DESKTOP  (≥ 1280px)
+═══════════════════════════════════════════ */
+@media (min-width: 1280px) {
+  .especialidades__grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}

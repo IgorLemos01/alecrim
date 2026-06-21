@@ -1,0 +1,107 @@
+/* ============================================================
+   ANIMATIONS — Keyframes e classes de animação
+   ============================================================ */
+
+/* ── Blob Morphing ── */
+@keyframes blob-morph {
+  0%, 100% {
+    border-radius: 60% 40% 70% 30% / 50% 60% 40% 70%;
+    transform: scale(1) rotate(0deg);
+  }
+  25% {
+    border-radius: 40% 60% 30% 70% / 60% 40% 70% 50%;
+    transform: scale(1.05) rotate(5deg);
+  }
+  50% {
+    border-radius: 70% 30% 50% 50% / 40% 70% 60% 40%;
+    transform: scale(0.98) rotate(-3deg);
+  }
+  75% {
+    border-radius: 30% 70% 60% 40% / 70% 30% 50% 60%;
+    transform: scale(1.02) rotate(2deg);
+  }
+}
+
+@keyframes blob-morph-2 {
+  0%, 100% {
+    border-radius: 40% 60% 30% 70% / 60% 40% 70% 50%;
+    transform: scale(1) rotate(0deg);
+  }
+  33% {
+    border-radius: 60% 40% 70% 30% / 50% 60% 40% 70%;
+    transform: scale(1.08) rotate(-6deg);
+  }
+  66% {
+    border-radius: 30% 70% 50% 50% / 70% 30% 60% 40%;
+    transform: scale(0.95) rotate(4deg);
+  }
+}
+
+/* ── Float ── */
+@keyframes float-up {
+  0%, 100% { transform: translateY(0); }
+  50%        { transform: translateY(-12px); }
+}
+
+/* ── Pulse Glow (WhatsApp) ── */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(2, 226, 109, 0.4),
+                0 4px 20px rgba(2, 226, 109, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(2, 226, 109, 0),
+                0 4px 20px rgba(2, 226, 109, 0.5);
+  }
+}
+
+/* ── Fade Up ── */
+@keyframes fade-up {
+  0%   { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Spin Slow ── */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* ── Count Up ── */
+@keyframes count-up {
+  0%   { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* ── Slide In (menu mobile) ── */
+@keyframes slide-in-right {
+  from { transform: translateX(100%); opacity: 0; }
+  to   { transform: translateX(0);    opacity: 1; }
+}
+
+@keyframes slide-out-right {
+  from { transform: translateX(0);    opacity: 1; }
+  to   { transform: translateX(100%); opacity: 0; }
+}
+
+/* ── Classes utilitárias de animação ── */
+.blob-1 { animation: blob-morph   12s ease-in-out infinite; }
+.blob-2 { animation: blob-morph-2 15s ease-in-out infinite; }
+.blob-3 { animation: blob-morph   18s ease-in-out infinite reverse; }
+.float-anim { animation: float-up 6s ease-in-out infinite; }
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  .blob-1, .blob-2, .blob-3, .float-anim {
+    animation: none;
+  }
+  .whatsapp-btn {
+    animation: none;
+    box-shadow: 0 4px 20px rgba(2, 226, 109, 0.4);
+  }
+  .fade-in-section {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

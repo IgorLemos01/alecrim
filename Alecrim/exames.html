@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#04539d">
+  <title>Exames e Diagnósticos | Centro Médico Alecrim — São Cristóvão SE</title>
+  <meta name="description" content="Exames laboratoriais, ultrassonografia, ecocardiograma, eletrocardiograma e mais no Centro Médico Alecrim. Resultados rápidos e preços acessíveis.">
+  <meta name="robots" content="index, follow">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/page-banner.css">
+  <link rel="stylesheet" href="css/exames.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/whatsapp.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+  <!-- Sidebar -->
+  <div id="sidebar-overlay" class="sidebar-overlay" aria-hidden="true"></div>
+  <aside id="sidebar" class="sidebar" role="dialog" aria-modal="true" aria-label="Menu de navegação">
+    <div class="sidebar__header">
+      <a href="index.html" class="sidebar__logo-link">
+        <img src="assets/logo.png" alt="Centro Médico Alecrim" class="sidebar__logo-img">
+      </a>
+      <button id="sidebar-close" class="sidebar__close" aria-label="Fechar menu">✕</button>
+    </div>
+    <nav class="sidebar__nav">
+      <ul class="sidebar__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sobre.html">Sobre Nós</a></li>
+        <li><a href="especialidades.html">Especialidades</a></li>
+        <li><a href="exames.html">Exames</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+    <div class="sidebar__footer">
+      <a href="https://wa.me/5579999204776?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20exame%20no%20Centro%20M%C3%A9dico%20Alecrim."
+         class="btn-primary" target="_blank" rel="noopener noreferrer">
+        📋 Agendar Exame
+      </a>
+    </div>
+  </aside>
+
+  <!-- Navbar -->
+  <header>
+    <nav id="navbar" class="navbar" role="navigation" aria-label="Navegação principal">
+      <div class="navbar__inner">
+        <a href="index.html" class="navbar__logo">
+          <img src="assets/logo.png" alt="Centro Médico Alecrim" class="navbar__logo-img">
+        </a>
+        <ul class="navbar__links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="sobre.html">Sobre Nós</a></li>
+          <li><a href="especialidades.html">Especialidades</a></li>
+          <li><a href="exames.html">Exames</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+        <a href="https://wa.me/5579999204776?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20exame%20no%20Centro%20M%C3%A9dico%20Alecrim."
+           class="navbar__cta" target="_blank" rel="noopener noreferrer">📋 Agendar Exame</a>
+        <button id="navbar-hamburger" class="navbar__hamburger"
+                aria-label="Abrir menu" aria-expanded="false" aria-controls="sidebar">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════
+         BANNER DA IMAGEM DE EXAMES
+    ═══════════════════════════════════════ -->
+    <div class="image-banner" aria-hidden="true">
+      <img src="assets/exames-banner.png"
+           alt="Exames sem complicação para você — Agende agora seus exames de rotina. Centro Médico Alecrim."
+           class="image-banner__img">
+    </div>
+
+    <!-- ═══════════════════════════════════════
+         SEÇÃO DE EXAMES
+    ═══════════════════════════════════════ -->
+    <section id="exames" class="exames" aria-labelledby="exames-title">
+      <div class="container">
+
+        <div class="section-header centered fade-in-section">
+          <div class="section-label"><span class="dot"></span> Exames e Diagnósticos</div>
+          <h1 id="exames-title" class="section-title">
+            Exames <span class="highlight">completos</span> e resultados rápidos
+          </h1>
+          <p class="section-subtitle">
+            Tecnologia de ponta e equipe especializada para diagnósticos precisos e ágeis, tudo em um só lugar.
+          </p>
+        </div>
+
+        <div class="exames__grid fade-in-section" role="list" aria-label="Lista de exames disponíveis">
+
+          <article class="exam-card" role="listitem">
+            <span class="exam-card__icon" aria-hidden="true">🔬</span>
+            <h2 class="exam-card__title">Laboratório Clínico</h2>
+            <p class="exam-card__description">
+              Hemograma completo, glicemia, colesterol, TSH, PSA, urina e mais de 200 tipos de exames laboratoriais.
+            </p>
+            <span class="exam-card__tag">Resultados em 24h</span>
+          </article>
+
+          <article class="exam-card" role="listitem">
+            <span class="exam-card__icon" aria-hidden="true">🖥️</span>
+            <h2 class="exam-card__title">Ultrassonografia</h2>
+            <p class="exam-card__description">
+              Ultrassom abdominal, pélvico, obstétrico, de tireoide, vascular e morfológico com equipamentos modernos.
+            </p>
+            <span class="exam-card__tag">Alta resolução</span>
+          </article>
+
+          <article class="exam-card" role="listitem">
+            <span class="exam-card__icon" aria-hidden="true">❤️</span>
+            <h2 class="exam-card__title">Ecocardiograma</h2>
+            <p class="exam-card__description">
+              Avaliação detalhada da estrutura e função cardíaca com imagens em tempo real e relatório detalhado.
+            </p>
+            <span class="exam-card__tag">Cardiologia diagnóstica</span>
+          </article>
+
+          <article class="exam-card" role="listitem">
+            <span class="exam-card__icon" aria-hidden="true">📊</span>
+            <h2 class="exam-card__title">Eletrocardiograma (ECG)</h2>
+            <p class="exam-card__description">
+              Exame rápido e indolor para avaliar o ritmo e a atividade elétrica do coração.
+            </p>
+            <span class="exam-card__tag">Resultado imediato</span>
+          </article>
+
+          <article class="exam-card" role="listitem">
+            <span class="exam-card__icon" aria-hidden="true">🫁</span>
+            <h2 class="exam-card__title">Espirometria</h2>
+            <p class="exam-card__description">
+              Avaliação da função pulmonar para diagnóstico de asma, DPOC e outras doenças respiratórias.
+            </p>
+            <span class="exam-card__tag">Pneumologia</span>
+          </article>
+
+          <article class="exam-card" role="listitem">
+            <span class="exam-card__icon" aria-hidden="true">💊</span>
+            <h2 class="exam-card__title">Outros Exames</h2>
+            <p class="exam-card__description">
+              Testes alérgicos, audiometria, acuidade visual e muito mais disponíveis em nossas unidades.
+            </p>
+            <span class="exam-card__tag">+30 tipos disponíveis</span>
+          </article>
+
+        </div>
+
+        <div class="exames__cta fade-in-section">
+          <a href="https://wa.me/5579999204776?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20exame%20no%20Centro%20M%C3%A9dico%20Alecrim."
+             class="btn-primary" target="_blank" rel="noopener noreferrer" id="exames-cta">
+            📋 Agendar Exame
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" aria-labelledby="exames-cta-title">
+      <div class="cta-section__inner fade-in-section">
+        <h2 id="exames-cta-title" class="cta-section__title">Exames sem complicação para você</h2>
+        <p class="cta-section__text">Agende seus exames de rotina pelo WhatsApp de forma rápida e sem burocracia.</p>
+        <div class="cta-section__actions">
+          <a href="https://wa.me/5579999204776?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20exame." class="btn-white" target="_blank" rel="noopener noreferrer">📋 Agendar pelo WhatsApp</a>
+          <a href="contato.html" class="btn-secondary">Ver nossas unidades</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__inner">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo">
+            <img src="assets/logo.png" alt="Centro Médico Alecrim" class="footer__logo-img">
+          </a>
+          <p class="footer__description">Cuidando da sua saúde com humanização e preços acessíveis em São Cristóvão, SE.</p>
+          <div class="footer__social">
+            <a href="https://instagram.com/centromedicoalecrim" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">📸</a>
+            <a href="https://wa.me/5579999204776" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">💬</a>
+          </div>
+        </div>
+        <div>
+          <h3 class="footer__col-title">Navegação</h3>
+          <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre Nós</a></li>
+            <li><a href="especialidades.html">Especialidades</a></li>
+            <li><a href="exames.html">Exames</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__col-title">Exames</h3>
+          <ul class="footer__links">
+            <li><a href="exames.html">Laboratório Clínico</a></li>
+            <li><a href="exames.html">Ultrassonografia</a></li>
+            <li><a href="exames.html">Ecocardiograma</a></li>
+            <li><a href="exames.html">Eletrocardiograma</a></li>
+            <li><a href="exames.html">Espirometria</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__col-title">Contato</h3>
+          <address class="footer__contact-items" style="font-style:normal">
+            <div class="footer__contact-item"><span class="icon">📞</span><a href="tel:+5579999204776">(79) 99920-4776</a></div>
+            <div class="footer__contact-item"><span class="icon">💬</span><a href="https://wa.me/5579999204776" target="_blank" rel="noopener noreferrer">WhatsApp</a></div>
+            <div class="footer__contact-item"><span class="icon">📍</span><span>São Cristóvão, Sergipe</span></div>
+            <div class="footer__contact-item"><span class="icon">🕐</span><span>Seg–Sex: 07h–18h | Sáb: 07h–12h</span></div>
+          </address>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; <span id="footer-year"></span> Centro Médico Alecrim. Todos os direitos reservados.</p>
+        <nav class="footer__bottom-links"><a href="contato.html">Política de Privacidade</a><a href="contato.html">Termos de Uso</a></nav>
+      </div>
+    </div>
+  </footer>
+
+  <a id="whatsapp-btn" class="whatsapp-btn" href="#" aria-label="Fale conosco pelo WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  </a>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>

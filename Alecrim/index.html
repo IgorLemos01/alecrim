@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#04539d">
+  <title>Centro Médico Alecrim | Clínica Multiespecialidades em São Cristóvão SE</title>
+  <meta name="description" content="Centro Médico Alecrim: clínica multiespecialidades em São Cristóvão, SE. +22 especialidades, exames laboratoriais, ultrassom e mais. Atendimento humanizado com preço acessível.">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Centro Médico Alecrim | Clínica Multiespecialidades">
+  <meta property="og:description" content="Saúde acessível e humanizada com +22 especialidades em um só lugar. Agende pelo WhatsApp!">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalClinic",
+    "name": "Centro Médico Alecrim",
+    "url": "https://centromedicoalecrim.com.br",
+    "telephone": "+55 79 99920-4776",
+    "openingHours": ["Mo-Fr 07:00-18:00", "Sa 07:00-12:00"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rod. João Bebe Água, 1623",
+      "addressLocality": "São Cristóvão",
+      "addressRegion": "SE",
+      "addressCountry": "BR"
+    }
+  }
+  </script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/page-banner.css">
+  <link rel="stylesheet" href="css/diferenciais.css">
+  <link rel="stylesheet" href="css/especialidades.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/whatsapp.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════
+       SIDEBAR OVERLAY + DRAWER
+  ═══════════════════════════════════════ -->
+  <div id="sidebar-overlay" class="sidebar-overlay" aria-hidden="true"></div>
+
+  <aside id="sidebar" class="sidebar" role="dialog" aria-modal="true" aria-label="Menu de navegação">
+    <div class="sidebar__header">
+      <a href="index.html" class="sidebar__logo-link" aria-label="Centro Médico Alecrim — Home">
+        <img src="assets/logo.png" alt="Centro Médico Alecrim" class="sidebar__logo-img">
+      </a>
+      <button id="sidebar-close" class="sidebar__close" aria-label="Fechar menu">✕</button>
+    </div>
+    <nav class="sidebar__nav">
+      <ul class="sidebar__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sobre.html">Sobre Nós</a></li>
+        <li><a href="especialidades.html">Especialidades</a></li>
+        <li><a href="exames.html">Exames</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+    <div class="sidebar__footer">
+      <a href="https://wa.me/5579999204776?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20no%20Centro%20M%C3%A9dico%20Alecrim."
+         class="btn-primary"
+         target="_blank"
+         rel="noopener noreferrer">
+        📅 Agendar Consulta
+      </a>
+    </div>
+  </aside>
+
+
+  <!-- ═══════════════════════════════════════
+       NAVBAR
+  ═══════════════════════════════════════ -->
+  <header>
+    <nav id="navbar" class="navbar" role="navigation" aria-label="Navegação principal">
+      <div class="navbar__inner">
+
+        <a href="index.html" class="navbar__logo" aria-label="Centro Médico Alecrim — Home">
+          <img src="assets/logo.png" alt="Centro Médico Alecrim" class="navbar__logo-img">
+        </a>
+
+        <ul class="navbar__links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="sobre.html">Sobre Nós</a></li>
+          <li><a href="especialidades.html">Especialidades</a></li>
+          <li><a href="exames.html">Exames</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+
+        <a href="https://wa.me/5579999204776?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20no%20Centro%20M%C3%A9dico%20Alecrim."
+           class="navbar__cta"
+           target="_blank"
+           rel="noopener noreferrer">
+          📅 Agendar
+        </a>
+
+        <button id="navbar-hamburger"
+                class="navbar__hamburger"
+                aria-label="Abrir menu"
+                aria-expanded="false"
+                aria-controls="sidebar">
+          <span></span><span></span><span></span>
+        </button>
+
+      </div>
+    </nav>
+  </header>
+
+
+  <main>
+
+    <!-- ═══════════════════════════════════════
+         HERO — Imagem principal
+    ═══════════════════════════════════════ -->
+    <section id="home" class="hero" aria-labelledby="hero-heading">
+
+      <div class="hero__banner-wrap fade-in-section">
+        <img src="assets/hero-banner.png"
+             alt="Atendimento humanizado a um preço acessível — Consultas e exames em um só lugar. Centro Médico Alecrim, São Cristóvão SE."
+             class="hero__banner-img"
+             width="1280"
+             height="640">
+      </div>
+
+      <div class="hero__cta-bar fade-in-section" id="hero-heading">
+        <a href="https://wa.me/5579999204776?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20no%20Centro%20M%C3%A9dico%20Alecrim."
+           class="btn-primary"
+           target="_blank"
+           rel="noopener noreferrer"
+           id="hero-cta-whatsapp">
+          📅 Agendar Consulta via WhatsApp
+        </a>
+        <a href="especialidades.html" class="btn-secondary" id="hero-cta-especialidades">
+          Nossas Especialidades →
+        </a>
+      </div>
+
+      <div class="hero__stats-bar" aria-label="Nossos números">
+        <div class="hero__stats-inner">
+          <div class="hero__stat-item fade-in-section">
+            <span class="hero__stat-num" data-counter data-end="22" data-suffix="+">22+</span>
+            <span class="hero__stat-label">Especialidades Médicas</span>
+          </div>
+          <div class="hero__stat-item fade-in-section">
+            <span class="hero__stat-num" data-counter data-end="5" data-suffix="+">5+</span>
+            <span class="hero__stat-label">Anos de Experiência</span>
+          </div>
+          <div class="hero__stat-item fade-in-section">
+            <span class="hero__stat-num" data-counter data-end="10" data-suffix="k+">10k+</span>
+            <span class="hero__stat-label">Pacientes Atendidos</span>
+          </div>
+          <div class="hero__stat-item fade-in-section">
+            <span class="hero__stat-num" data-counter data-end="2" data-suffix="">2</span>
+            <span class="hero__stat-label">Unidades em SE</span>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         DIFERENCIAIS
+    ═══════════════════════════════════════ -->
+    <section id="diferenciais" class="diferenciais" aria-labelledby="diferenciais-title">
+      <div class="container">
+
+        <div class="section-header centered fade-in-section">
+          <div class="section-label"><span class="dot"></span> Por que o Alecrim</div>
+          <h2 id="diferenciais-title" class="section-title">
+            O que nos torna <span class="highlight">diferentes</span>
+          </h2>
+          <p class="section-subtitle">
+            Unimos tecnologia, humanização e acessibilidade para oferecer a melhor experiência em saúde.
+          </p>
+        </div>
+
+        <div class="diferenciais__grid" role="list">
+
+          <article class="diferencial-card fade-in-section" role="listitem">
+            <div class="diferencial-card__icon" aria-hidden="true">💊</div>
+            <h3 class="diferencial-card__title">Múltiplas Especialidades</h3>
+            <p class="diferencial-card__text">
+              Mais de 22 especialidades médicas em um único lugar, sem precisar se deslocar para diferentes clínicas.
+            </p>
+          </article>
+
+          <article class="diferencial-card fade-in-section" role="listitem">
+            <div class="diferencial-card__icon" aria-hidden="true">💰</div>
+            <h3 class="diferencial-card__title">Preço Acessível</h3>
+            <p class="diferencial-card__text">
+              Consultas e exames com valores justos, para que toda família tenha acesso a cuidados de qualidade.
+            </p>
+          </article>
+
+          <article class="diferencial-card fade-in-section" role="listitem">
+            <div class="diferencial-card__icon" aria-hidden="true">🤝</div>
+            <h3 class="diferencial-card__title">Atendimento Humanizado</h3>
+            <p class="diferencial-card__text">
+              Nossa equipe acolhe cada paciente com empatia, respeito e atenção individualizada.
+            </p>
+          </article>
+
+          <article class="diferencial-card fade-in-section" role="listitem">
+            <div class="diferencial-card__icon" aria-hidden="true">⚡</div>
+            <h3 class="diferencial-card__title">Agendamento Fácil</h3>
+            <p class="diferencial-card__text">
+              Agende sua consulta pelo WhatsApp, de forma rápida e sem burocracia.
+            </p>
+          </article>
+
+          <article class="diferencial-card fade-in-section" role="listitem">
+            <div class="diferencial-card__icon" aria-hidden="true">🔬</div>
+            <h3 class="diferencial-card__title">Exames Completos</h3>
+            <p class="diferencial-card__text">
+              Laboratório, ultrassom, ecocardiograma e muito mais, com resultados rápidos e precisos.
+            </p>
+          </article>
+
+          <article class="diferencial-card fade-in-section" role="listitem">
+            <div class="diferencial-card__icon" aria-hidden="true">📍</div>
+            <h3 class="diferencial-card__title">2 Unidades</h3>
+            <p class="diferencial-card__text">
+              Presente em São Cristóvão, SE, para atender você e sua família com comodidade.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         TEASER ESPECIALIDADES
+    ═══════════════════════════════════════ -->
+    <section class="especialidades" aria-labelledby="esp-teaser-title">
+      <div class="container">
+
+        <div class="section-header centered fade-in-section">
+          <div class="section-label"><span class="dot"></span> Especialidades Médicas</div>
+          <h2 id="esp-teaser-title" class="section-title">
+            Mais de <span class="highlight">22 especialidades</span> em um só lugar
+          </h2>
+          <p class="section-subtitle">Cuidamos de você e sua família do início ao acompanhamento.</p>
+        </div>
+
+        <div class="especialidades__grid fade-in-section" role="list">
+          <div class="specialty-card" role="listitem"><div class="specialty-card__icon">❤️</div><span class="specialty-card__name">Cardiologia</span></div>
+          <div class="specialty-card" role="listitem"><div class="specialty-card__icon">🧠</div><span class="specialty-card__name">Neurologia</span></div>
+          <div class="specialty-card" role="listitem"><div class="specialty-card__icon">🦴</div><span class="specialty-card__name">Ortopedia</span></div>
+          <div class="specialty-card" role="listitem"><div class="specialty-card__icon">👁️</div><span class="specialty-card__name">Oftalmologia</span></div>
+          <div class="specialty-card" role="listitem"><div class="specialty-card__icon">👶</div><span class="specialty-card__name">Pediatria</span></div>
+          <div class="specialty-card" role="listitem"><div class="specialty-card__icon">🤰</div><span class="specialty-card__name">Ginecologia</span></div>
+          <div class="specialty-card" role="listitem"><div class="specialty-card__icon">🩺</div><span class="specialty-card__name">Clínica Geral</span></div>
+          <div class="specialty-card" role="listitem"><div class="specialty-card__icon">🧬</div><span class="specialty-card__name">Dermatologia</span></div>
+          <div class="specialty-card" role="listitem"><div class="specialty-card__icon">🧘</div><span class="specialty-card__name">Psicologia</span></div>
+          <div class="specialty-card" role="listitem"><div class="specialty-card__icon">🍃</div><span class="specialty-card__name">Nutrição</span></div>
+        </div>
+
+        <div class="especialidades__cta fade-in-section">
+          <a href="especialidades.html" class="btn-primary" id="esp-teaser-cta">
+            Ver todas as especialidades →
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         CTA SECTION
+    ═══════════════════════════════════════ -->
+    <section class="cta-section" aria-labelledby="cta-title">
+      <div class="cta-section__inner fade-in-section">
+        <h2 id="cta-title" class="cta-section__title">Pronto para cuidar da sua saúde?</h2>
+        <p class="cta-section__text">
+          Agende agora mesmo pelo WhatsApp e garanta seu atendimento com nossa equipe especializada.
+        </p>
+        <div class="cta-section__actions">
+          <a href="https://wa.me/5579999204776?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20no%20Centro%20M%C3%A9dico%20Alecrim."
+             class="btn-white"
+             target="_blank"
+             rel="noopener noreferrer"
+             id="cta-whatsapp">
+            📅 Agendar pelo WhatsApp
+          </a>
+          <a href="exames.html" class="btn-secondary" id="cta-exames">
+            Ver exames disponíveis
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__inner">
+      <div class="footer__grid">
+
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo" aria-label="Centro Médico Alecrim — Home">
+            <img src="assets/logo.png" alt="Centro Médico Alecrim" class="footer__logo-img">
+          </a>
+          <p class="footer__description">
+            Cuidando da sua saúde com humanização, qualidade e preços acessíveis em São Cristóvão, SE.
+          </p>
+          <div class="footer__social">
+            <a href="https://instagram.com/centromedicoalecrim" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">📸</a>
+            <a href="https://wa.me/5579999204776" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">💬</a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer__col-title">Navegação</h3>
+          <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre Nós</a></li>
+            <li><a href="especialidades.html">Especialidades</a></li>
+            <li><a href="exames.html">Exames</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer__col-title">Serviços</h3>
+          <ul class="footer__links">
+            <li><a href="especialidades.html">Consultas Médicas</a></li>
+            <li><a href="exames.html">Laboratório Clínico</a></li>
+            <li><a href="exames.html">Ultrassonografia</a></li>
+            <li><a href="exames.html">Ecocardiograma</a></li>
+            <li><a href="exames.html">Eletrocardiograma</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer__col-title">Contato</h3>
+          <address class="footer__contact-items" style="font-style:normal">
+            <div class="footer__contact-item">
+              <span class="icon">📞</span>
+              <a href="tel:+5579999204776">(79) 99920-4776</a>
+            </div>
+            <div class="footer__contact-item">
+              <span class="icon">💬</span>
+              <a href="https://wa.me/5579999204776" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            </div>
+            <div class="footer__contact-item">
+              <span class="icon">📸</span>
+              <a href="https://instagram.com/centromedicoalecrim" target="_blank" rel="noopener noreferrer">@centromedicoalecrim</a>
+            </div>
+            <div class="footer__contact-item">
+              <span class="icon">📍</span>
+              <span>São Cristóvão, Sergipe</span>
+            </div>
+            <div class="footer__contact-item">
+              <span class="icon">🕐</span>
+              <span>Seg–Sex: 07h–18h | Sáb: 07h–12h</span>
+            </div>
+          </address>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; <span id="footer-year"></span> Centro Médico Alecrim. Todos os direitos reservados.</p>
+        <nav class="footer__bottom-links">
+          <a href="contato.html">Política de Privacidade</a>
+          <a href="contato.html">Termos de Uso</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- WhatsApp flutuante -->
+  <a id="whatsapp-btn" class="whatsapp-btn" href="#" aria-label="Fale conosco pelo WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+  </a>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>

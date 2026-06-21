@@ -1,0 +1,107 @@
+/* ============================================================
+   RESET & VARIÁVEIS GLOBAIS — Centro Médico Alecrim
+   ============================================================ */
+
+:root {
+  /* Cores principais */
+  --azul-escuro:    #04539d;
+  --azul-medio:     #1e7ec6;
+  --azul-petroleo:  #0d5f95;
+  --verde-vibrante: #02e26d;
+  --verde-medio:    #13c784;
+  --verde-agua:     #2be7b2;
+  --branco:         #ffffff;
+  --cinza-claro:    #f0f5fb;
+  --cinza-medio:    #9ca3af;
+  --quase-preto:    #1e1e1e;
+
+  /* Gradientes */
+  --gradient-hero:  linear-gradient(135deg, #04539d 0%, #0d5f95 40%, #1e7ec6 100%);
+  --gradient-verde: linear-gradient(135deg, #02e26d 0%, #13c784 100%);
+  --gradient-text:  linear-gradient(135deg, #02e26d 0%, #2be7b2 100%);
+
+  /* Tipografia */
+  --font-family: 'Poppins', sans-serif;
+
+  /* Navbar */
+  --navbar-height: 72px;
+
+  /* Espaçamentos */
+  --section-padding: 80px 20px;
+  --container-max: 1200px;
+  --container-padding: 0 24px;
+
+  /* Sombras */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 20px rgba(4, 83, 157, 0.15);
+  --shadow-lg: 0 16px 40px rgba(4, 83, 157, 0.2);
+
+  /* Bordas */
+  --radius-sm:   8px;
+  --radius-md:   12px;
+  --radius-lg:   20px;
+  --radius-xl:   32px;
+  --radius-full: 9999px;
+
+  /* Transições */
+  --transition-fast: 0.2s ease;
+  --transition-md:   0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+
+/* ── Reset base ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--quase-preto);
+  background: var(--branco);
+  line-height: 1.6;
+  overflow-x: hidden;
+  padding-top: var(--navbar-height);
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul, ol { list-style: none; }
+
+a { color: inherit; text-decoration: none; }
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+/* ── Container ── */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: var(--container-padding);
+}
+
+/* ── Acessibilidade ── */
+:focus-visible {
+  outline: 3px solid var(--verde-vibrante);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar        { width: 6px; }
+::-webkit-scrollbar-track  { background: #f1f1f1; }
+::-webkit-scrollbar-thumb  { background: var(--azul-medio); border-radius: 3px; }
