@@ -183,3 +183,110 @@ section {
 .fade-in-section.visible {
   animation: none;
 }
+
+/* ============================================================
+   LUCIDE ICONS — Estilos Globais
+   ============================================================ */
+
+/* Tamanho base do ícone Lucide (SVG gerado via JS) */
+i[data-lucide] svg,
+[data-lucide] svg {
+  display: block;
+}
+
+/* Ícones nos cards de diferenciais */
+.diferencial-card__icon i[data-lucide] svg {
+  width: 28px;
+  height: 28px;
+  stroke: var(--verde-vibrante);
+  stroke-width: 1.75;
+}
+
+/* Ícones nos cards de especialidades */
+.specialty-card__icon i[data-lucide] svg {
+  width: 32px;
+  height: 32px;
+  stroke: var(--azul-escuro);
+  stroke-width: 1.75;
+  transition: stroke var(--transition-fast);
+}
+
+.specialty-card:hover .specialty-card__icon i[data-lucide] svg {
+  stroke: var(--branco);
+}
+
+/* Ícones nos cards de exames */
+.exam-card__icon i[data-lucide] svg {
+  width: 36px;
+  height: 36px;
+  stroke: var(--verde-vibrante);
+  stroke-width: 1.75;
+}
+
+/* Ícones no footer — social */
+.footer__social-link i[data-lucide] svg {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
+  stroke-width: 1.75;
+}
+
+/* Ícones no footer — contato */
+.footer__contact-item .icon i[data-lucide] svg {
+  width: 18px;
+  height: 18px;
+  stroke: var(--verde-vibrante);
+  stroke-width: 2;
+}
+
+/* Ícones nas informações de unidade */
+.info-icon i[data-lucide] svg {
+  width: 18px;
+  height: 18px;
+  stroke: var(--verde-vibrante);
+  stroke-width: 2;
+}
+
+/* Ícones nas unidades (cabeçalho do card) */
+.unidade-card__icon i[data-lucide] svg {
+  width: 36px;
+  height: 36px;
+  stroke: var(--verde-vibrante);
+  stroke-width: 1.75;
+}
+
+/* Ícone de horários */
+.horarios__icon i[data-lucide] svg {
+  width: 40px;
+  height: 40px;
+  stroke: var(--verde-vibrante);
+  stroke-width: 1.75;
+}
+
+/* Ícones em botões */
+.btn-primary i[data-lucide] svg,
+.btn-secondary i[data-lucide] svg,
+.btn-white i[data-lucide] svg,
+.unidade-btn i[data-lucide] svg,
+.navbar__cta i[data-lucide] svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+
+/* Ícones nos cards da sidebar */
+.sidebar__footer i[data-lucide] svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+
+/* Ícone no botão "Ver nossas unidades" do sobre.html */
+.sobre__content .btn-primary i[data-lucide] svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  stroke-width: 2;
+}
