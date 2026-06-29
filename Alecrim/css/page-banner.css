@@ -79,9 +79,10 @@
   width: 100%;
   height: auto;
   display: block;
-  max-height: 480px;
-  object-fit: cover;
+  max-height: 600px;
+  object-fit: contain;
   object-position: center;
+  background: #f4f6fb;
 }
 
 
