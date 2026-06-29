@@ -68,21 +68,25 @@
 }
 
 
-/* ── Image Banner: Imagem de destaque full-width ── */
+/* ── Image Banner: mesmo estilo do hero da home ── */
 .image-banner {
   width: 100%;
   background: var(--cinza-claro);
-  padding: 0;
+  padding: 36px 24px 0;
+}
+
+.image-banner__inner {
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 .image-banner__img {
   width: 100%;
   height: auto;
   display: block;
-  max-height: 600px;
-  object-fit: contain;
-  object-position: center;
-  background: #f4f6fb;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 12px 48px rgba(4, 83, 157, 0.14);
+  object-fit: cover;
 }
 
 
