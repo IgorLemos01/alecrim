@@ -26,11 +26,7 @@
   position: relative;
   border-radius: var(--radius-xl);
   overflow: hidden;
-  background: var(--gradient-hero);
-  aspect-ratio: 4/3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  line-height: 0;
 }
 
 .sobre__image-placeholder {
