@@ -198,7 +198,7 @@ i[data-lucide] svg,
 .diferencial-card__icon i[data-lucide] svg {
   width: 28px;
   height: 28px;
-  stroke: var(--verde-vibrante);
+  stroke: #ffffff;
   stroke-width: 1.75;
 }
 
@@ -206,13 +206,13 @@ i[data-lucide] svg,
 .specialty-card__icon i[data-lucide] svg {
   width: 32px;
   height: 32px;
-  stroke: var(--azul-escuro);
+  stroke: var(--verde-vibrante);
   stroke-width: 1.75;
   transition: stroke var(--transition-fast);
 }
 
 .specialty-card:hover .specialty-card__icon i[data-lucide] svg {
-  stroke: var(--branco);
+  stroke: var(--verde-vibrante);
 }
 
 /* Ícones nos cards de exames */
