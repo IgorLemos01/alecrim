@@ -86,8 +86,8 @@
 .specialty-card__icon {
   width: 52px;
   height: 52px;
-  background: rgba(2,226,109,0.2);
-  border: 1px solid rgba(2,226,109,0.3);
+  background: linear-gradient(135deg, #1e9e6a 0%, #2dd68a 100%);
+  border: 1px solid rgba(2,226,109,0.4);
   border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
@@ -98,7 +98,7 @@
 }
 
 .specialty-card:hover .specialty-card__icon {
-  background: rgba(2,226,109,0.3);
+  background: linear-gradient(135deg, #02e26d 0%, #2be7b2 100%);
 }
 
 .specialty-card__name {

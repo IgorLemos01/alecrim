@@ -195,24 +195,29 @@ i[data-lucide] svg,
 }
 
 /* Ícones nos cards de diferenciais */
-.diferencial-card__icon i[data-lucide] svg {
+.diferencial-card__icon i[data-lucide] svg,
+.diferencial-card__icon svg {
   width: 28px;
   height: 28px;
-  stroke: #ffffff;
-  stroke-width: 1.75;
+  stroke: #ffffff !important;
+  stroke-width: 2 !important;
+  color: #ffffff !important;
 }
 
 /* Ícones nos cards de especialidades */
-.specialty-card__icon i[data-lucide] svg {
+.specialty-card__icon i[data-lucide] svg,
+.specialty-card__icon svg {
   width: 32px;
   height: 32px;
-  stroke: var(--verde-vibrante);
-  stroke-width: 1.75;
+  stroke: #ffffff !important;
+  stroke-width: 2 !important;
+  color: #ffffff !important;
   transition: stroke var(--transition-fast);
 }
 
-.specialty-card:hover .specialty-card__icon i[data-lucide] svg {
-  stroke: var(--verde-vibrante);
+.specialty-card:hover .specialty-card__icon i[data-lucide] svg,
+.specialty-card:hover .specialty-card__icon svg {
+  stroke: #ffffff !important;
 }
 
 /* Ícones nos cards de exames */

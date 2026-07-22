@@ -127,7 +127,7 @@
 .diferencial-card__icon {
   width: 56px;
   height: 56px;
-  background: var(--gradient-verde-escuro);
+  background: linear-gradient(135deg, #1e9e6a 0%, #2dd68a 100%);
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
