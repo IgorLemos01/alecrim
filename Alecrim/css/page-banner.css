@@ -92,7 +92,7 @@
 
 /* ── CTA Section: faixa de chamada para ação ── */
 .cta-section {
-  background: var(--gradient-hero);
+  background: var(--gradient-hero-full);
   padding: 64px 24px;
   text-align: center;
   position: relative;

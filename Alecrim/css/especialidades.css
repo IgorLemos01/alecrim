@@ -5,6 +5,19 @@
 .especialidades {
   background: var(--branco);
   padding: var(--section-padding);
+  position: relative;
+}
+
+.especialidades::before {
+  content: '';
+  position: absolute;
+  bottom: -60px;
+  left: -60px;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(10,61,46,0.05) 0%, transparent 70%);
+  pointer-events: none;
+  border-radius: 50%;
 }
 
 /* ── Grid principal ── */
@@ -33,8 +46,14 @@
 
 .specialty-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 16px 40px rgba(4, 83, 157, 0.2);
-  border-color: rgba(2, 226, 109, 0.4);
+  box-shadow: var(--shadow-verde);
+  border-color: rgba(10, 61, 46, 0.3);
+  background: var(--verde-escuro);
+  color: #fff;
+}
+
+.specialty-card:hover .specialty-card__name {
+  color: #fff;
 }
 
 .specialty-card__icon {

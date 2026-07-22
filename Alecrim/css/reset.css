@@ -10,15 +10,20 @@
   --verde-vibrante: #02e26d;
   --verde-medio:    #13c784;
   --verde-agua:     #2be7b2;
+  --verde-escuro:   #0a3d2e;   /* ← verde escuro novo */
+  --verde-floresta: #145c42;   /* ← verde floresta para gradientes */
   --branco:         #ffffff;
   --cinza-claro:    #f0f5fb;
+  --cinza-verde:    #edf5f1;   /* ← cinza com toque verde */
   --cinza-medio:    #9ca3af;
   --quase-preto:    #1e1e1e;
 
   /* Gradientes */
-  --gradient-hero:  linear-gradient(135deg, #04539d 0%, #0d5f95 40%, #1e7ec6 100%);
-  --gradient-verde: linear-gradient(135deg, #02e26d 0%, #13c784 100%);
-  --gradient-text:  linear-gradient(135deg, #02e26d 0%, #2be7b2 100%);
+  --gradient-hero:        linear-gradient(135deg, #0a3d2e 0%, #04539d 50%, #0d5f95 100%);
+  --gradient-verde:       linear-gradient(135deg, #02e26d 0%, #13c784 100%);
+  --gradient-text:        linear-gradient(135deg, #02e26d 0%, #2be7b2 100%);
+  --gradient-verde-escuro: linear-gradient(135deg, #0a3d2e 0%, #145c42 60%, #1a7a55 100%);
+  --gradient-hero-full:   linear-gradient(135deg, #0a3d2e 0%, #04539d 45%, #1e7ec6 100%);
 
   /* Tipografia */
   --font-family: 'Poppins', sans-serif;
@@ -35,6 +40,7 @@
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
   --shadow-md: 0 4px 20px rgba(4, 83, 157, 0.15);
   --shadow-lg: 0 16px 40px rgba(4, 83, 157, 0.2);
+  --shadow-verde: 0 8px 32px rgba(10, 61, 46, 0.25);
 
   /* Bordas */
   --radius-sm:   8px;
@@ -104,4 +110,4 @@ button {
 /* ── Scrollbar ── */
 ::-webkit-scrollbar        { width: 6px; }
 ::-webkit-scrollbar-track  { background: #f1f1f1; }
-::-webkit-scrollbar-thumb  { background: var(--azul-medio); border-radius: 3px; }
+::-webkit-scrollbar-thumb  { background: var(--verde-floresta); border-radius: 3px; }

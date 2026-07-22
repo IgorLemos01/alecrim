@@ -3,8 +3,21 @@
    ============================================================ */
 
 .diferenciais {
-  background: #f8faff;
+  background: var(--cinza-verde);
   padding: var(--section-padding);
+  position: relative;
+  overflow: hidden;
+}
+
+.diferenciais::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(10,61,46,0.07) 0%, transparent 70%);
+  pointer-events: none;
 }
 
 /* ── Stats row ── */
@@ -81,7 +94,7 @@
 
 .diferencial-card:hover {
   transform: translateY(-8px);
-  box-shadow: var(--shadow-xl);
+  box-shadow: var(--shadow-verde);
 }
 
 .diferencial-card:hover::before {
@@ -91,13 +104,14 @@
 .diferencial-card__icon {
   width: 56px;
   height: 56px;
-  background: linear-gradient(135deg, rgba(2,226,109,0.12) 0%, rgba(43,231,178,0.12) 100%);
+  background: linear-gradient(135deg, rgba(10,61,46,0.1) 0%, rgba(20,92,66,0.12) 100%);
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.6rem;
   margin-bottom: 20px;
+  border: 1px solid rgba(10,61,46,0.12);
 }
 
 .diferencial-card__title {

@@ -101,14 +101,24 @@
     padding-top: 64px;
   }
 
-  /* ── Hero ── */
-  .hero__banner-wrap {
+  /* ── Hero carrossel ── */
+  .hero__carousel {
     padding: 20px 16px 0;
-  }
-
-  .hero__banner-img {
     border-radius: var(--radius-md);
   }
+
+  .hero__carousel-slide img {
+    border-radius: var(--radius-md);
+  }
+
+  .hero__carousel-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
+  }
+
+  .hero__carousel-btn--prev { left: 20px; }
+  .hero__carousel-btn--next { right: 20px; }
 
   .hero__cta-bar {
     flex-direction: column;

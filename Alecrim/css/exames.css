@@ -3,7 +3,7 @@
    ============================================================ */
 
 .exames {
-  background: #f8faff;
+  background: var(--cinza-verde);
   padding: var(--section-padding);
 }
 
@@ -25,9 +25,16 @@
 }
 
 .exam-card:hover {
-  border-color: var(--verde-vibrante);
+  border-color: var(--verde-floresta);
   transform: translateY(-4px);
-  box-shadow: 0 12px 35px rgba(2, 226, 109, 0.25);
+  box-shadow: var(--shadow-verde);
+  background: var(--verde-escuro);
+  color: #fff;
+}
+
+.exam-card:hover .exam-card__title,
+.exam-card:hover .exam-card__description {
+  color: rgba(255,255,255,0.9);
 }
 
 .exam-card__icon {

@@ -3,9 +3,20 @@
    ============================================================ */
 
 .footer {
-  background: var(--quase-preto);
+  background: var(--verde-escuro);
   color: rgba(255, 255, 255, 0.75);
   padding: 60px 24px 0;
+  position: relative;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 20% 80%, rgba(2,226,109,0.05) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 80% at 80% 20%, rgba(4,83,157,0.08) 0%, transparent 60%);
+  pointer-events: none;
 }
 
 .footer__inner {

@@ -199,3 +199,80 @@
   var el = document.getElementById('footer-year');
   if (el) el.textContent = new Date().getFullYear();
 })();
+
+
+// ══════════════════════════════════════════════
+// CARROSSEL HERO — Troca automática de banners
+// ══════════════════════════════════════════════
+(function initHeroCarousel() {
+  var track   = document.getElementById('hero-carousel-track');
+  var wrap    = document.getElementById('hero-carousel');
+  if (!track || !wrap) return;
+
+  var slides  = track.querySelectorAll('.hero__carousel-slide');
+  var dots    = wrap.querySelectorAll('.hero__carousel-dot');
+  var btnPrev = document.getElementById('carousel-prev');
+  var btnNext = document.getElementById('carousel-next');
+
+  if (slides.length < 2) return;
+
+  var current   = 0;
+  var total     = slides.length;
+  var interval  = null;
+  var DELAY     = 5000; // 5 segundos
+
+  function goTo(index) {
+    current = (index + total) % total;
+    track.style.transform = 'translateX(-' + (current * 100) + '%)';
+    dots.forEach(function(d, i) {
+      d.classList.toggle('active', i === current);
+      d.setAttribute('aria-selected', i === current ? 'true' : 'false');
+    });
+  }
+
+  function next() { goTo(current + 1); }
+  function prev() { goTo(current - 1); }
+
+  function startAuto() {
+    stopAuto();
+    interval = setInterval(next, DELAY);
+  }
+
+  function stopAuto() {
+    if (interval) { clearInterval(interval); interval = null; }
+  }
+
+  // Dots
+  dots.forEach(function(dot, i) {
+    dot.addEventListener('click', function() {
+      goTo(i);
+      startAuto(); // reinicia o timer ao clicar
+    });
+  });
+
+  // Setas
+  btnPrev && btnPrev.addEventListener('click', function() { prev(); startAuto(); });
+  btnNext && btnNext.addEventListener('click', function() { next(); startAuto(); });
+
+  // Pausa ao passar o mouse
+  wrap.addEventListener('mouseenter', stopAuto);
+  wrap.addEventListener('mouseleave', startAuto);
+
+  // Touch swipe (mobile)
+  var touchStartX = 0;
+  wrap.addEventListener('touchstart', function(e) {
+    touchStartX = e.touches[0].clientX;
+    stopAuto();
+  }, { passive: true });
+  wrap.addEventListener('touchend', function(e) {
+    var diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) {
+      diff > 0 ? next() : prev();
+    }
+    startAuto();
+  }, { passive: true });
+
+  // Inicia
+  goTo(0);
+  startAuto();
+})();
