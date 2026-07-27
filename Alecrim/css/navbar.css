@@ -10,7 +10,7 @@
   right: 0;
   z-index: 1000;
   height: var(--navbar-height);
-  background: linear-gradient(to right, #02e26d 0%, #13c784 100%);
+  background: linear-gradient(135deg, #02e26d 0%, #13c784 100%);
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.20);
   transition: box-shadow var(--transition-md);
 }
