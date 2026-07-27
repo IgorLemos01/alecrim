@@ -8,7 +8,7 @@
   top: 0; left: 0; right: 0;
   z-index: 1000;
   height: var(--navbar-height);
-  background: var(--verde-escuro);
+  background: var(--verde-floresta);
   box-shadow: 0 2px 12px rgba(0,0,0,0.20);
   transition: box-shadow var(--transition-md);
 }
