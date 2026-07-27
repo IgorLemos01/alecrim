@@ -39,8 +39,8 @@
   text-decoration: none;
   flex-shrink: 0;
   background: #ffffff;
-  border-radius: 10px;
-  padding: 6px 16px;
+  border-radius: 12px;
+  padding: 8px 20px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
   transition: box-shadow var(--transition-fast), transform var(--transition-fast);
 }
@@ -51,7 +51,7 @@
 }
 
 .navbar__logo-img {
-  height: 60px;
+  height: 76px;
   width: auto;
   object-fit: contain;
   display: block;
