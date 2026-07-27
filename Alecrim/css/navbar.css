@@ -40,7 +40,7 @@
   flex-shrink: 0;
   background: #ffffff;
   border-radius: 10px;
-  padding: 12px 12px;
+  padding: 6px 14px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
   transition: box-shadow var(--transition-fast), transform var(--transition-fast);
 }
@@ -51,7 +51,7 @@
 }
 
 .navbar__logo-img {
-  height: 44px;
+  height: 58px;
   width: auto;
   object-fit: contain;
   display: block;
