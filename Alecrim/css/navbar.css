@@ -10,7 +10,7 @@
   right: 0;
   z-index: 1000;
   height: var(--navbar-height);
-  background: var(--verde-floresta);
+  background: var(--gradient-verde);
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.20);
   transition: box-shadow var(--transition-md);
 }
@@ -38,20 +38,19 @@
   align-items: center;
   text-decoration: none;
   flex-shrink: 0;
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 8px 20px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
-  transition: box-shadow var(--transition-fast), transform var(--transition-fast);
+  background: transparent;
+  border-radius: 0;
+  padding: 4px 0;
+  transition: transform var(--transition-fast), filter var(--transition-fast);
 }
 
 .navbar__logo:hover {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
   transform: translateY(-1px);
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.2));
 }
 
 .navbar__logo-img {
-  height: 76px;
+  height: 90px;
   width: auto;
   object-fit: contain;
   display: block;
@@ -95,7 +94,7 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: var(--gradient-verde);
+  background: var(--verde-floresta);
   color: #fff;
   font-family: var(--font-family);
   font-size: 0.88rem;
@@ -103,14 +102,15 @@
   padding: 10px 22px;
   border-radius: var(--radius-full);
   text-decoration: none;
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
-  box-shadow: 0 3px 14px rgba(2, 226, 109, 0.35);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+  box-shadow: 0 3px 14px rgba(141, 195, 71, 0.4);
   white-space: nowrap;
 }
 
 .navbar__cta:hover {
   transform: translateY(-1px);
-  box-shadow: 0 6px 22px rgba(2, 226, 109, 0.5);
+  background: #7aab3a;
+  box-shadow: 0 6px 22px rgba(141, 195, 71, 0.55);
 }
 
 /* ── Hamburger button ── */
@@ -214,13 +214,12 @@
 }
 
 .sidebar__logo-img {
-  height: 44px;
+  height: 48px;
   width: auto;
   object-fit: contain;
-  /* Fundo branco intencional — logo tem bg branco */
-  background: #fff;
-  border-radius: var(--radius-sm);
-  padding: 4px 10px;
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
 }
 
 .sidebar__close {
