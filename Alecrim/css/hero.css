@@ -14,7 +14,7 @@
 /* ── Carrossel ── */
 .hero__carousel {
   width: 100%;
-  max-width: 2010px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 24px 24px 0;
   position: relative;
@@ -39,8 +39,8 @@
   display: block;
   border-radius: var(--radius-lg);
   box-shadow: 0 12px 48px rgba(10, 61, 46, 0.18);
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
+  object-fit: cover;
+  image-rendering: auto;
 }
 
 /* Dots de navegação */
