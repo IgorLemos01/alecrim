@@ -122,23 +122,25 @@
     <!-- ═══════════════════════════════════════
          HERO — Imagem principal
     ═══════════════════════════════════════ -->
-    <section id="home" class="hero" aria-labelledby="hero-heading">
+    <!-- ═══════════════════════════════════════
+         HERO — Carrossel full-screen
+    ═══════════════════════════════════════ -->
+    <section id="home" class="hero" aria-label="Banner principal">
 
       <!-- Carrossel de banners -->
-      <div class="hero__carousel fade-in-section" id="hero-carousel" aria-label="Banners do Centro Médico Alecrim"
-        role="region">
+      <div class="hero__carousel" id="hero-carousel" role="region" aria-label="Banners do Centro Médico Alecrim">
         <div class="hero__carousel-track" id="hero-carousel-track">
 
           <div class="hero__carousel-slide" role="group" aria-label="Slide 1 de 2">
             <img src="assets/hero-banner.png"
               alt="Atendimento humanizado a um preço acessível — Consultas e exames em um só lugar. Centro Médico Alecrim, São Cristóvão SE."
-              width="1024" height="409" loading="eager">
+              loading="eager">
           </div>
 
           <div class="hero__carousel-slide" role="group" aria-label="Slide 2 de 2">
             <img src="assets/hero-banner-2.png"
-              alt="Exames para toda a família — Porque sua saúde não pode esperar. Centro Médico Alecrim." width="1024"
-              height="409" loading="lazy">
+              alt="Exames para toda a família — Porque sua saúde não pode esperar. Centro Médico Alecrim."
+              loading="lazy">
           </div>
 
         </div>
@@ -158,7 +160,12 @@
           id="carousel-next">&#8250;</button>
       </div>
 
-      <div class="hero__cta-bar fade-in-section" id="hero-heading">
+    </section>
+
+    <!-- CTA + Stats abaixo do banner -->
+    <div class="hero__below" id="hero-heading">
+
+      <div class="hero__cta-bar fade-in-section">
         <a href="https://wa.me/5579999204776?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20no%20Centro%20M%C3%A9dico%20Alecrim."
           class="btn-primary" target="_blank" rel="noopener noreferrer" id="hero-cta-whatsapp">
           Agendar Consulta via WhatsApp
@@ -189,7 +196,7 @@
         </div>
       </div>
 
-    </section>
+    </div>
 
 
     <!-- ═══════════════════════════════════════
