@@ -101,23 +101,7 @@
     padding-top: 64px;
   }
 
-  /* ── Hero full-screen: altura proporcional no mobile ── */
-  .hero {
-    height: 55vw;
-    min-height: 280px;
-  }
-
-  .hero__carousel-btn {
-    width: 32px;
-    height: 32px;
-    font-size: 0.9rem;
-    /* Sempre visível no mobile (sem hover) */
-    opacity: 0.7;
-    pointer-events: auto;
-  }
-
-  .hero__carousel-btn--prev { left: 10px; }
-  .hero__carousel-btn--next { right: 10px; }
+  /* ── Hero full-screen: setas sempre visíveis no mobile ── */
 
   .hero__cta-bar {
     flex-direction: column;
