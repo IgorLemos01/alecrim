@@ -60,17 +60,17 @@
 .navbar__links {
   display: flex;
   align-items: center;
-  gap: 2px;
+  gap: 4px;
   list-style: none;
   margin-left: auto;
 }
 
 .navbar__links a {
   display: block;
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 0.9rem;
+  color: var(--quase-preto);
+  font-size: 0.92rem;
   font-weight: 500;
-  padding: 8px 14px;
+  padding: 8px 16px;
   border-radius: var(--radius-sm);
   text-decoration: none;
   transition: color var(--transition-fast), background var(--transition-fast);
@@ -79,13 +79,13 @@
 
 .navbar__links a:hover,
 .navbar__links a.active {
-  color: #fff;
-  background: rgba(255, 255, 255, 0.1);
+  color: var(--verde-escuro);
+  background: var(--cinza-verde);
 }
 
 .navbar__links a.active {
   font-weight: 700;
-  color: #fff;
+  color: var(--verde-escuro);
 }
 
 /* ── CTA button ── */
@@ -94,23 +94,23 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: var(--verde-floresta);
-  color: #fff;
+  background: var(--gradient-verde);
+  color: var(--branco);
   font-family: var(--font-family);
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   font-weight: 700;
-  padding: 10px 22px;
+  padding: 10px 24px;
   border-radius: var(--radius-full);
   text-decoration: none;
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
-  box-shadow: 0 3px 14px rgba(141, 195, 71, 0.4);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), opacity var(--transition-fast);
+  box-shadow: 0 4px 14px rgba(2, 226, 109, 0.35);
   white-space: nowrap;
 }
 
 .navbar__cta:hover {
   transform: translateY(-1px);
-  background: #7aab3a;
-  box-shadow: 0 6px 22px rgba(141, 195, 71, 0.55);
+  box-shadow: 0 6px 20px rgba(2, 226, 109, 0.5);
+  opacity: 0.95;
 }
 
 /* ── Hamburger button ── */
@@ -131,14 +131,14 @@
 }
 
 .navbar__hamburger:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--cinza-verde);
 }
 
 .navbar__hamburger span {
   display: block;
   width: 22px;
   height: 2px;
-  background: #fff;
+  background: var(--quase-preto);
   border-radius: 2px;
   transition: transform 0.3s ease, opacity 0.3s ease;
   transform-origin: center;
