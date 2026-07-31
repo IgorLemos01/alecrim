@@ -2,32 +2,18 @@
    RESPONSIVE — Media queries centralizadas
    Breakpoints:
      Desktop:   > 1024px (padrão)
-     Tablet:    768px – 1024px
-     Mobile L:  480px – 767px
+     Tablet:    769px – 1024px
+     Mobile:    ≤ 768px  → hambúrguer ativado
+     Mobile L:  480px – 768px
      Mobile S:  < 480px
    ============================================================ */
 
 
 /* ═══════════════════════════════════════════
-   TABLET / MOBILE  (≤ 1024px)
-   Mostra hambúrguer, esconde links e CTA desktop
+   TABLET  (≤ 1024px)
+   Ajustes de layout para tablets — sem hambúrguer
 ═══════════════════════════════════════════ */
 @media (max-width: 1024px) {
-
-  /* ── Navbar ── */
-  .navbar__links,
-  .navbar__cta {
-    display: none;
-  }
-
-  .navbar__hamburger {
-    display: flex;
-    margin-left: auto;
-  }
-
-  .navbar__inner {
-    padding: 0 20px;
-  }
 
   /* ── Hero ── */
   .hero__stats-inner {
@@ -35,7 +21,7 @@
     gap: 12px;
   }
 
-  .hero__stat-item + .hero__stat-item {
+  .hero__stat-item+.hero__stat-item {
     border-left: none;
   }
 
@@ -59,6 +45,7 @@
     grid-template-columns: 1fr;
     gap: 40px;
   }
+
   .sobre__visual {
     max-width: 480px;
     margin: 0 auto;
@@ -75,6 +62,29 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
+  }
+}
+
+
+/* ═══════════════════════════════════════════
+   MOBILE / TABLET PEQUENO  (≤ 768px)
+   Mostra hambúrguer, esconde links e CTA desktop
+═══════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* ── Navbar ── */
+  .navbar__links,
+  .navbar__cta {
+    display: none;
+  }
+
+  .navbar__hamburger {
+    display: flex;
+    margin-left: auto;
+  }
+
+  .navbar__inner {
+    padding: 0 20px;
   }
 }
 
