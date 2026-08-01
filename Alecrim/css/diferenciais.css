@@ -28,13 +28,13 @@
 }
 
 .diferenciais .section-label {
-  background: rgba(10, 61, 46, 0.08);
-  color: var(--verde-escuro);
-  border-color: rgba(10, 61, 46, 0.25);
+  background: rgba(11, 102, 71, 0.08);
+  color: #0b6647;
+  border-color: rgba(11, 102, 71, 0.25);
 }
 
 .diferenciais .section-label .dot {
-  background: var(--verde-escuro);
+  background: #0b6647;
 }
 
 .diferenciais .section-title .highlight {
@@ -42,7 +42,7 @@
   -webkit-background-clip: initial;
   -webkit-text-fill-color: initial;
   background-clip: initial;
-  color: var(--verde-escuro);
+  color: #0b6647;
 }
 
 .diferenciais .section-subtitle {
