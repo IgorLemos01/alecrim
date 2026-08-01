@@ -27,6 +27,24 @@
   font-size: clamp(2rem, 4.5vw, 3rem); /* Título ligeiramente maior */
 }
 
+.diferenciais .section-label {
+  background: rgba(10, 61, 46, 0.08);
+  color: var(--verde-escuro);
+  border-color: rgba(10, 61, 46, 0.25);
+}
+
+.diferenciais .section-label .dot {
+  background: var(--verde-escuro);
+}
+
+.diferenciais .section-title .highlight {
+  background: none;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+  background-clip: initial;
+  color: var(--verde-escuro);
+}
+
 .diferenciais .section-subtitle {
   max-width: 750px; /* Texto de apoio mais largo */
   margin: 0 auto;
