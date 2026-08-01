@@ -27,17 +27,16 @@
 
   /* ── Diferenciais ── */
   .diferenciais {
-    grid-template-columns: 1fr;
-    padding: 64px 20px;
+    padding: 60px 0;
   }
 
-  .diferenciais__side-left,
-  .diferenciais__side-right {
-    display: none;
+  .container--diferenciais {
+    padding: 0 24px;
   }
 
   .diferenciais__grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
   }
 
   /* ── Especialidades ── */
