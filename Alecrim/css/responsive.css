@@ -32,7 +32,7 @@
 
   /* ── Especialidades ── */
   .especialidades__grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 
   /* ── Exames ── */
@@ -290,7 +290,5 @@
    LARGE DESKTOP  (≥ 1280px)
 ═══════════════════════════════════════════ */
 @media (min-width: 1280px) {
-  .especialidades__grid {
-    grid-template-columns: repeat(5, 1fr);
-  }
+  /* Grid já é 5 colunas por padrão */
 }
