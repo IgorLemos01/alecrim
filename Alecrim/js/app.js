@@ -202,36 +202,126 @@
 
 
 // ══════════════════════════════════════════════
-// CARROSSEL HERO — Troca automática de banners
+// ══════════════════════════════════════════════
+// CARROSSEL HERO — Troca automática de banners com Loop Infinito Contínuo
 // ══════════════════════════════════════════════
 (function initHeroCarousel() {
   var track   = document.getElementById('hero-carousel-track');
   var wrap    = document.getElementById('hero-carousel');
   if (!track || !wrap) return;
 
-  var slides  = track.querySelectorAll('.hero__carousel-slide');
-  var dots    = wrap.querySelectorAll('.hero__carousel-dot');
-  var btnPrev = document.getElementById('carousel-prev');
-  var btnNext = document.getElementById('carousel-next');
+  var realSlides = Array.from(track.querySelectorAll('.hero__carousel-slide'));
+  var dots       = Array.from(wrap.querySelectorAll('.hero__carousel-dot'));
+  var btnPrev    = document.getElementById('carousel-prev');
+  var btnNext    = document.getElementById('carousel-next');
 
-  if (slides.length < 2) return;
+  if (realSlides.length < 2) return;
 
-  var current   = 0;
-  var total     = slides.length;
-  var interval  = null;
-  var DELAY     = 5000; // 5 segundos
+  var total = realSlides.length;
 
-  function goTo(index) {
-    current = (index + total) % total;
-    track.style.transform = 'translateX(-' + (current * 100) + '%)';
+  // Clones para permitir transição contínua para frente (3 -> 1) e para trás (1 -> 3)
+  var cloneFirst = realSlides[0].cloneNode(true);
+  cloneFirst.setAttribute('aria-hidden', 'true');
+  cloneFirst.classList.add('hero__carousel-slide--clone');
+
+  var cloneLast = realSlides[total - 1].cloneNode(true);
+  cloneLast.setAttribute('aria-hidden', 'true');
+  cloneLast.classList.add('hero__carousel-slide--clone');
+
+  track.appendChild(cloneFirst);
+  track.insertBefore(cloneLast, realSlides[0]);
+
+  var currentReal = 0; // Índice da imagem real (0, 1, 2)
+  var trackIndex  = 1; // Posição na track (0: Clone de 3, 1: Slide 1, 2: Slide 2, 3: Slide 3, 4: Clone de 1)
+  var isAnimating = false;
+  var interval    = null;
+  var DELAY       = 5000; // 5 segundos
+  var transitionTimer = null;
+
+  // Posiciona a track no Slide 1 sem transição inicial
+  track.style.transition = 'none';
+  track.style.transform  = 'translateX(-' + (trackIndex * 100) + '%)';
+  track.offsetHeight; // Força reflow
+
+  function updateDots(realIdx) {
     dots.forEach(function(d, i) {
-      d.classList.toggle('active', i === current);
-      d.setAttribute('aria-selected', i === current ? 'true' : 'false');
+      var active = (i === realIdx);
+      d.classList.toggle('active', active);
+      d.setAttribute('aria-selected', active ? 'true' : 'false');
     });
   }
 
-  function next() { goTo(current + 1); }
-  function prev() { goTo(current - 1); }
+  function setTrackPosition(targetTrackIdx, animated) {
+    if (transitionTimer) {
+      clearTimeout(transitionTimer);
+      transitionTimer = null;
+    }
+
+    if (animated) {
+      track.style.transition = '';
+      transitionTimer = setTimeout(handleLoopJump, 750);
+    } else {
+      track.style.transition = 'none';
+    }
+
+    trackIndex = targetTrackIdx;
+    track.style.transform = 'translateX(-' + (trackIndex * 100) + '%)';
+  }
+
+  function handleLoopJump() {
+    if (transitionTimer) {
+      clearTimeout(transitionTimer);
+      transitionTimer = null;
+    }
+
+    if (trackIndex === 0) {
+      // Chegou no Clone da última imagem (movimento pra trás a partir da 1ª)
+      // Salta silenciosamente para a 3ª imagem real
+      trackIndex = total;
+      setTrackPosition(trackIndex, false);
+    } else if (trackIndex === total + 1) {
+      // Chegou no Clone da primeira imagem (movimento pra frente a partir da 3ª)
+      // Salta silenciosamente para a 1ª imagem real
+      trackIndex = 1;
+      setTrackPosition(trackIndex, false);
+    }
+    isAnimating = false;
+  }
+
+  track.addEventListener('transitionend', handleLoopJump);
+
+  function goToReal(targetReal, direction) {
+    if (isAnimating) return;
+
+    var newReal = (targetReal + total) % total;
+
+    // Se estiver no último slide (3º) e ir para o próximo (1º): avança para o clone do 1º
+    if (currentReal === total - 1 && newReal === 0 && direction !== 'prev') {
+      isAnimating = true;
+      currentReal = 0;
+      updateDots(currentReal);
+      setTrackPosition(total + 1, true);
+      return;
+    }
+
+    // Se estiver no primeiro slide (1º) e ir para o anterior (3º): recua para o clone do 3º
+    if (currentReal === 0 && newReal === total - 1 && direction === 'prev') {
+      isAnimating = true;
+      currentReal = total - 1;
+      updateDots(currentReal);
+      setTrackPosition(0, true);
+      return;
+    }
+
+    // Movimento direto entre slides adjacentes ou pelos dots
+    isAnimating = true;
+    currentReal = newReal;
+    updateDots(currentReal);
+    setTrackPosition(currentReal + 1, true);
+  }
+
+  function next() { goToReal(currentReal + 1, 'next'); }
+  function prev() { goToReal(currentReal - 1, 'prev'); }
 
   function startAuto() {
     stopAuto();
@@ -242,15 +332,17 @@
     if (interval) { clearInterval(interval); interval = null; }
   }
 
-  // Dots
+  // Eventos dos Dots
   dots.forEach(function(dot, i) {
     dot.addEventListener('click', function() {
-      goTo(i);
-      startAuto(); // reinicia o timer ao clicar
+      if (i === currentReal) return;
+      var dir = (i > currentReal || (currentReal === total - 1 && i === 0)) ? 'next' : 'prev';
+      goToReal(i, dir);
+      startAuto();
     });
   });
 
-  // Setas
+  // Eventos das Setas
   btnPrev && btnPrev.addEventListener('click', function() { prev(); startAuto(); });
   btnNext && btnNext.addEventListener('click', function() { next(); startAuto(); });
 
@@ -264,6 +356,7 @@
     touchStartX = e.touches[0].clientX;
     stopAuto();
   }, { passive: true });
+
   wrap.addEventListener('touchend', function(e) {
     var diff = touchStartX - e.changedTouches[0].clientX;
     if (Math.abs(diff) > 40) {
@@ -272,7 +365,6 @@
     startAuto();
   }, { passive: true });
 
-  // Inicia
-  goTo(0);
+  updateDots(0);
   startAuto();
 })();
