@@ -25,6 +25,8 @@
   width: 100%;
   transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: transform;
+  transform-style: flat;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* ── Cada slide ocupa 100% do container ── */
@@ -33,6 +35,7 @@
   width: 100%;
   position: relative;
   flex-shrink: 0;
+  transform: translateZ(0);
 }
 
 /* ── Imagem: largura total, proporção ideal mantendo nitidez de imagem ── */
@@ -44,7 +47,8 @@
   object-position: center center;
   display: block;
   image-rendering: -webkit-optimize-contrast;
-  image-rendering: high-quality;
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: bicubic;
   transform: translateZ(0);
   backface-visibility: hidden;
   border-radius: 0;
