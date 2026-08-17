@@ -35,15 +35,18 @@
   flex-shrink: 0;
 }
 
-/* ── Imagem: largura total, proporção exata da primeira imagem (sem alterar altura do banner) ── */
+/* ── Imagem: largura total, proporção ideal mantendo nitidez de imagem ── */
 .hero__carousel-slide img {
   width: 100%;
+  height: auto;
   aspect-ratio: 1983 / 793;
   object-fit: cover;
   object-position: center center;
   display: block;
   image-rendering: -webkit-optimize-contrast;
-  image-rendering: auto;
+  image-rendering: high-quality;
+  transform: translateZ(0);
+  backface-visibility: hidden;
   border-radius: 0;
   box-shadow: none;
 }

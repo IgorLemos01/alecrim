@@ -120,7 +120,13 @@
     padding-top: 64px;
   }
 
-  /* ── Hero full-screen: setas sempre visíveis no mobile ── */
+  /* ── Hero full-screen: ajuste de proporção e nitidez das imagens no mobile ── */
+  .hero__carousel-slide img {
+    aspect-ratio: 2.1 / 1;
+    min-height: 180px;
+    object-fit: cover;
+    object-position: center center;
+  }
 
   .hero__cta-bar {
     flex-direction: column;
@@ -262,6 +268,11 @@
    MOBILE S  (≤ 480px)
 ═══════════════════════════════════════════ */
 @media (max-width: 480px) {
+
+  .hero__carousel-slide img {
+    aspect-ratio: 1.95 / 1;
+    min-height: 190px;
+  }
 
   .hero__stat-num {
     font-size: 1.3rem;
