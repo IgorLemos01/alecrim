@@ -38,7 +38,7 @@
   transform: translateZ(0);
 }
 
-/* ── Imagem: largura total, proporção ideal mantendo nitidez de imagem ── */
+/* ── Imagem: largura total, proporção ideal mantendo a qualidade natural da imagem ── */
 .hero__carousel-slide img {
   width: 100%;
   height: auto;
@@ -46,11 +46,7 @@
   object-fit: cover;
   object-position: center center;
   display: block;
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
-  -ms-interpolation-mode: bicubic;
-  transform: translateZ(0);
-  backface-visibility: hidden;
+  image-rendering: auto;
   border-radius: 0;
   box-shadow: none;
 }
