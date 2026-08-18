@@ -24,22 +24,21 @@
   display: flex;
   width: 100%;
   transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: transform;
 }
 
-/* ── Cada slide ocupa 100% do container ── */
+/* ── Cada slide ocupa 100% do container com proporção travada para evitar distorções ── */
 .hero__carousel-slide {
   min-width: 100%;
   width: 100%;
   position: relative;
   flex-shrink: 0;
+  aspect-ratio: 1983 / 793;
 }
 
-/* ── Imagem: largura total, proporção ideal mantendo a qualidade natural da imagem ── */
+/* ── Imagem: preenche todo o slide preservando a proporção original da foto ── */
 .hero__carousel-slide img {
   width: 100%;
-  height: auto;
-  aspect-ratio: 1983 / 793;
+  height: 100%;
   object-fit: cover;
   object-position: center center;
   display: block;
