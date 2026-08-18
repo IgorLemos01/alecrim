@@ -121,9 +121,14 @@
   }
 
   /* ── Hero full-screen: ajuste de proporção e nitidez das imagens no mobile ── */
-  .hero__carousel-slide img {
+  .hero__carousel-slide {
     aspect-ratio: 2.1 / 1;
     min-height: 180px;
+  }
+
+  .hero__carousel-slide img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     object-position: center center;
   }
@@ -269,9 +274,14 @@
 ═══════════════════════════════════════════ */
 @media (max-width: 480px) {
 
-  .hero__carousel-slide img {
+  .hero__carousel-slide {
     aspect-ratio: 1.95 / 1;
     min-height: 190px;
+  }
+
+  .hero__carousel-slide img {
+    width: 100%;
+    height: 100%;
   }
 
   .hero__stat-num {
