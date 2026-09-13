@@ -55,7 +55,6 @@ BibliotecaWeb / BibliotecaAPI  (Controllers)
 - Infrastructure: implementação concreta dos repositórios (`AutorRepository`) usando um novo `Context` (EF Core), além das implementações de `Editora` e `ItemAcervo`.
 - Banco de dados: passou a usar EF Core InMemory (`UseInMemoryDatabase`), tanto para o `Context` novo quanto para o `BibliotecaContext` antigo e o `IdentityContext`. Isso elimina a necessidade de configurar um MySQL real para rodar o projeto localmente.
 
-> ⚠️ Estado atual da migração: apenas o recurso Autor foi totalmente migrado. Controllers, injeção de dependência (`Program.cs`) e Use Cases já usam Clean Architecture de ponta a ponta. Os recursos Editora, ItemAcervo e Livro já têm entidades e Use Cases criados em `Domain`/`Application`/`Infrastructure`, mas os Controllers (`EditoraController`, `ItemAcervoController`, `LivroController`) ainda usam a arquitetura antiga (`Service`), e esses repositórios não estão registrados no `Program.cs`.
 
 ## Por que migrar para Clean Architecture?
 
